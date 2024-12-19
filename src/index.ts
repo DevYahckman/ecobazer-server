@@ -4,13 +4,19 @@ import mongoose from "mongoose";
 import users from './routes/users'
 import auth from './routes/auth'
 import products from './routes/products'
+import carts from './routes/carts'
+import order from './routes/order'
+import cors from 'cors'
 
 
 
 app.use(express.json());
+app.use(cors())
 app.use('/api/users', users)
 app.use('/api/auth', auth)
 app.use('/api/products', products)
+app.use('/api/carts', carts)
+app.use('/api/order', order)
 
 
 

@@ -40,13 +40,4 @@ export const validateProducts = z.object({
   ratings: z.number(),
 });
 
-//   review: z.object({
-//     user: z.string(),
-//     Comment: z.string().min(1),
-//     rating: z.number(),
-//   }),
-//   additionalInfo: z.object({
-//     wweight: z.number(),
-//     color: z.string(),
-//     type: z.string(),
-//   }),
+

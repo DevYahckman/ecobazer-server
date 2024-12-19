@@ -2,10 +2,12 @@ import express, { Request, Response } from "express";
 import { User, validateUser } from "../model/users";
 import bcrypt from "bcrypt";
 import _ from "lodash";
+import auth from "../middlewares/auth";
+import admin from "../middlewares/admin";
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/", [auth, admin], async (req:any, res:any) => {
   const users = await User.find();
   res.send(users);
 });
